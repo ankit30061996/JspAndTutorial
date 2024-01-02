@@ -1,34 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-
-<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
-	 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
-	 version="6.0">
-
-    
-<servlet>
-    <servlet-name>first</servlet-name>
-    <servlet-class>com.servlets.FirstServlets</servlet-class>
-</servlet>
-
- 
-
-<servlet>
-    <servlet-name>second</servlet-name>
-    <servlet-class>com.servlets.SecondServlets</servlet-class>
-</servlet>
-
-<servlet-mapping>
-    <servlet-name>first</servlet-name>
-    <url-pattern>/web</url-pattern>
-</servlet-mapping>
-    
-
-<servlet-mapping>
-    <servlet-name>second</servlet-name>
-    <url-pattern>/second</url-pattern>
-</servlet-mapping>   
-    
-
+<web-app version="6.0" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd">
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <servlet-name>myServlet</servlet-name>
+        <servlet-class>com.practice.MyServlets</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.practice.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>success</servlet-name>
+        <servlet-class>com.practice.SuccessServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>S1</servlet-name>
+        <servlet-class>com.attr.S1</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>S2</servlet-name>
+        <servlet-class>com.attr.S2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>myServlet</servlet-name>
+        <url-pattern>/myServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/RegisterServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>success</servlet-name>
+        <url-pattern>/success</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>S1</servlet-name>
+        <url-pattern>/S1</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>S2</servlet-name>
+        <url-pattern>/S2</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+        30
+    </session-timeout>
+    </session-config>
 </web-app>
